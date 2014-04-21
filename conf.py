@@ -242,7 +242,7 @@ COMPILERS = {
 # To do manual deployment, set it to []
 # DEPLOY_COMMANDS = []
 DEPLOY_COMMANDS = ["git checkout BlogSource",
-                   "git add ./*",
+                   "git add .",
                    "git commit -a",
                    "git push origin BlogSource",
                    "git subtree push --prefix output/ origin master"] 
@@ -406,6 +406,8 @@ CONTENT_FOOTER = CONTENT_FOOTER.format(email=BLOG_EMAIL,
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
 # COMMENT_SYSTEM_ID = "nikolademo"
+COMMENT_SYSTEM = ""
+COMMENT_SYSTEM_ID = ""
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages

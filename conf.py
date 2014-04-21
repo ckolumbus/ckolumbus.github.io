@@ -241,6 +241,12 @@ COMPILERS = {
 # plugin (`nikola install_plugin ping`).
 # To do manual deployment, set it to []
 # DEPLOY_COMMANDS = []
+DEPLOY_COMMANDS = ["git checkout BlogSource",
+                   "git add ./*",
+                   "git commit -a",
+                   "git push origin BlogSource",
+                   "git subtree push --prefix output/ origin master"] 
+
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative

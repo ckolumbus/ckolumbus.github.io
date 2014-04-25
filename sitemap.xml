@@ -5,31 +5,39 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>http://ckolumbus.github.io/2014/index.html</loc>
+  <lastmod>2014-04-22</lastmod>
+ </url>
+ <url>
   <loc>http://ckolumbus.github.io/archive.html</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/categories/index.html</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/galleries/index.html</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/galleries/rss.xml</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/index.html</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/listings/index.html</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/posts/first-github-posting.html</loc>
+  <lastmod>2014-04-22</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/rss.xml</loc>
-  <lastmod>2014-04-21</lastmod>
+  <lastmod>2014-04-22</lastmod>
  </url>
 </urlset>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="author" content="Chris Drexler">
-    <title>Tags | CKolumbus' Dev Blog</title>
+    <title>Backporting Qt App from Python3 to Python2 (SIP API Versions) | CKolumbus' Dev Blog</title>
     
     
         
@@ -14,7 +14,7 @@
         
     
     
-      <link rel="canonical" href="http://ckolumbus.github.io/categories/index.html">
+      <link rel="canonical" href="http://ckolumbus.github.io/posts/backporting-qt-app-from-python3-to-python2-sip-api-versions.html">
     
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -27,7 +27,14 @@
     
 
     
+
     
+
+
+
+    
+
+
     
     
 </head>
@@ -57,7 +64,7 @@
     
         
             
-                </li><li class="active"><a href="#">Tags</a>
+                </li><li><a href="../categories/index.html">Tags</a>
             
         
     
@@ -90,6 +97,12 @@
                 
                 
                     
+
+    <li>
+    <a href="backporting-qt-app-from-python3-to-python2-sip-api-versions.rst" id="sourcelink">Source</a>
+    </li>
+
+
                 
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -103,21 +116,81 @@
         <!--Body content-->
         <div class="row">
             
-    <h1>Tags</h1>
+    <article class="postbox post-text">
+    <div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Backporting Qt App from Python3 to Python2 (SIP API Versions)</h1>
+    
+
+    <hr>
+    <small>
+        Posted: <time class="published dt-published" datetime="2014-04-23T07:21:19+02:00" itemprop="datePublished">2014-04-23 07:21</time>
+        
+    
+
+        
+    
+          |  More posts about
+        
+            <a class="tag" href="../categories/pyside.html"><span class="badge badge-info">PySide</span></a>
+        
+            <a class="tag" href="../categories/qt.html"><span class="badge badge-info">Qt</span></a>
+        
+            <a class="tag" href="../categories/python3.html"><span class="badge badge-info">Python3</span></a>
+        
+            <a class="tag" href="../categories/python2.html"><span class="badge badge-info">Python2</span></a>
+        
+    
+
+    </small>
+    <hr>
+    <div class="e-content" itemprop="articleBody text">
+    <div><p>The issue came up with trying to integrate parts of an existing Python3/Qt app
+(mikidown) into a Python2/Qt app.  After minor standard issues, like
+exceptions and print functions, many strange errors with respect to <tt class="docutils literal">QString</tt>
+and <tt class="docutils literal">QVariant</tt> handling showed up.</p>
+<p>Searching for solution considering the different unicode string handling
+between Py2 &amp; Py3 did not give any answers: the solution lay in the different
+PySide API versions for the different Python versions.</p>
+<p>An introduction to the <a class="reference external" href="http://pyqt.sourceforge.net/Docs/PyQt4/incompatible_apis.html">incompatible PySide API</a> gave insight in how the
+different versions are handled and how the used API version can be switched
+for a given python environment.</p>
+<p>The problems related to <tt class="docutils literal">QString</tt> &amp; <tt class="docutils literal">QVariant</tt> could be solved by switching the
+API version for those two classes to the one which is standard in Python3.</p>
+<p>The following snippet needed to be inserted before importing any Qt related
+module:</p>
+<pre class="literal-block">
+import sip
+sip.setapi('QString', 2)
+sip.setapi('QVariant', 2)
+</pre>
+<p>My application for this is for the development of Markdown/reStructured text
+based wiki utilizing <a class="reference external" href="https://github.com/rnons/mikidown">mikidown</a> and <a class="reference external" href="https://sourceforge.net/projects/retext/">ReText</a>. Both target the <cite>Python3</cite> but
+with the trick above, large number of issues were resolved.</p></div>
+    </div>
+    
+    </div>
     
     
-        <ul class="list-unstyled bricks">
+        <ul class="pager">
         
-            <li><a class="reference" href="pyside.html">PySide</a></li>
+            <li class="previous">
+                <a href="first-github-posting.html" rel="prev">← Previous post</a>
+            </li>
         
-            <li><a class="reference" href="python2.html">Python2</a></li>
-        
-            <li><a class="reference" href="python3.html">Python3</a></li>
-        
-            <li><a class="reference" href="qt.html">Qt</a></li>
         
         </ul>
     
+
+    
+        
+    
+
+    
+    
+    
+
+    </article>
 
         </div>
         <!--End of body content-->

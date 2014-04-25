@@ -16,7 +16,7 @@ SITE_URL = "http://ckolumbus.github.io/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://getnikola.com/"
-BLOG_EMAIL = "ckolumbus@github.com"
+BLOG_EMAIL = "ckolumbus@ac-drexler.de"
 BLOG_DESCRIPTION = "CKol's Blogging@Github"
 
 # Nikola is multilingual!

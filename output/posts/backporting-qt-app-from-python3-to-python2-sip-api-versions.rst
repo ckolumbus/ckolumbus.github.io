@@ -1,7 +1,7 @@
 .. title: Backporting Qt App from Python3 to Python2 (SIP API Versions)
 .. slug: backporting-qt-app-from-python3-to-python2-sip-api-versions
 .. date: 2014/04/23 07:21:19
-.. tags: PySide, Qt, Python3, Python2
+.. tags: PySide, Qt, Python3, Python2, backporting, API
 .. link: 
 .. description: 
 .. type: text

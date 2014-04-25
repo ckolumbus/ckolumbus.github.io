@@ -338,7 +338,7 @@ DEPLOY_COMMANDS = ["git checkout BlogSource",
 
 # Name of the theme to use.
 #THEME = "bootstrap3"
-THEME="bootstrap3-jinja"
+THEME="ck-bootstrap3-jinja"
 
 # Color scheme to be used for code blocks. If your theme provides
 # "assets/css/code.css" this is ignored.

@@ -16,7 +16,7 @@ SITE_URL = "http://ckolumbus.github.io/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://getnikola.com/"
-BLOG_EMAIL = "ckolumbus@github.com"
+BLOG_EMAIL = "ckolumbus@ac-drexler.de"
 BLOG_DESCRIPTION = "CKol's Blogging@Github"
 
 # Nikola is multilingual!
@@ -338,7 +338,7 @@ DEPLOY_COMMANDS = ["git checkout BlogSource",
 
 # Name of the theme to use.
 #THEME = "bootstrap3"
-THEME="bootstrap3-jinja"
+THEME="ck-bootstrap3-jinja"
 
 # Color scheme to be used for code blocks. If your theme provides
 # "assets/css/code.css" this is ignored.
@@ -668,7 +668,7 @@ SEARCH_FORM = """
 TIMEZONE = 'Europe/Berlin'
 
 # If webassets is installed, bundle JS and CSS to make site loading faster
-# USE_BUNDLES = True
+USE_BUNDLES = True
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]

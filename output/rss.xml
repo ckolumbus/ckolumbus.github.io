@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CKolumbus' Dev Blog</title><link>http://ckolumbus.github.io/</link><description>CKol's Blogging@Github</description><atom:link href="http://ckolumbus.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 21 Apr 2014 20:03:56 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>First GitHub posting</title><link>http://ckolumbus.github.io/posts/first-github-posting.html</link><description>&lt;div&gt;&lt;p&gt;This is my first post on GitHub pages. I will (hopefully) continue to post
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>CKolumbus' Dev Blog</title><link>http://ckolumbus.github.io/</link><description>CKol's Blogging@Github</description><atom:link href="http://ckolumbus.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Fri, 25 Apr 2014 11:06:05 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Backporting Qt App from Python3 to Python2 (SIP API Versions)</title><link>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</link><description>&lt;div&gt;&lt;p&gt;The issue came up with trying to integrate parts of an existing Python3/Qt app
+(mikidown) into a Python2/Qt app.  After minor standard issues, like
+exceptions and print functions, many strange errors with respect to &lt;tt class="docutils literal"&gt;QString&lt;/tt&gt;
+and &lt;tt class="docutils literal"&gt;QVariant&lt;/tt&gt; handling showed up.&lt;/p&gt;
+&lt;p&gt;Searching for solution considering the different unicode string handling
+between Py2 &amp;amp; Py3 did not give any answers: the solution lay in the different
+PySide API versions for the different Python versions.&lt;/p&gt;
+&lt;p&gt;An introduction to the &lt;a class="reference external" href="http://pyqt.sourceforge.net/Docs/PyQt4/incompatible_apis.html"&gt;incompatible PySide API&lt;/a&gt; gave insight in how the
+different versions are handled and how the used API version can be switched
+for a given python environment.&lt;/p&gt;
+&lt;p&gt;The problems related to &lt;tt class="docutils literal"&gt;QString&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;QVariant&lt;/tt&gt; could be solved by switching the
+API version for those two classes to the one which is standard in Python3.&lt;/p&gt;
+&lt;p&gt;The following snippet needed to be inserted before importing any Qt related
+module:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+import sip
+sip.setapi('QString', 2)
+sip.setapi('QVariant', 2)
+&lt;/pre&gt;
+&lt;p&gt;My application for this is for the development of Markdown/reStructured text
+based wiki utilizing &lt;a class="reference external" href="https://github.com/rnons/mikidown"&gt;mikidown&lt;/a&gt; and &lt;a class="reference external" href="https://sourceforge.net/projects/retext/"&gt;ReText&lt;/a&gt;. Both target the &lt;cite&gt;Python3&lt;/cite&gt; but
+with the trick above, large number of issues were resolved.&lt;/p&gt;&lt;/div&gt;</description><category>PySide</category><category>Qt</category><category>Python3</category><category>Python2</category><category>backporting</category><category>API</category><guid>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</guid><pubDate>Wed, 23 Apr 2014 05:21:19 GMT</pubDate></item><item><title>First GitHub posting</title><link>http://ckolumbus.github.io/posts/2014/04/first-github-posting.html</link><description>&lt;div&gt;&lt;p&gt;This is my first post on GitHub pages. I will (hopefully) continue to post
 my development related activies, loosly associated with my repositories.&lt;/p&gt;
-&lt;p&gt;Chris&lt;/p&gt;&lt;/div&gt;</description><guid>http://ckolumbus.github.io/posts/first-github-posting.html</guid><pubDate>Mon, 21 Apr 2014 17:21:06 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Chris&lt;/p&gt;&lt;/div&gt;</description><guid>http://ckolumbus.github.io/posts/2014/04/first-github-posting.html</guid><pubDate>Mon, 21 Apr 2014 17:21:06 GMT</pubDate></item></channel></rss>

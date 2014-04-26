@@ -406,8 +406,8 @@ CONTENT_FOOTER = CONTENT_FOOTER.format(email=BLOG_EMAIL,
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
 # COMMENT_SYSTEM_ID = "nikolademo"
-COMMENT_SYSTEM = ""
-COMMENT_SYSTEM_ID = ""
+COMMENT_SYSTEM = "disqus"
+COMMENT_SYSTEM_ID = "ckolumbusgithub"
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages

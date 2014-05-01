@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CKolumbus' Dev Blog (Python2)</title><link>http://ckolumbus.github.io/</link><description></description><atom:link type="application/rss+xml" href="http://ckolumbus.github.io/categories/python2.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 26 Apr 2014 13:01:57 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Backporting Qt App from Python3 to Python2 (SIP API Versions)</title><link>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</link><description>&lt;div&gt;&lt;p&gt;The issue came up with trying to integrate parts of an existing Python3/Qt app
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CKolumbus' Dev Blog (Python2)</title><link>http://ckolumbus.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://ckolumbus.github.io/categories/python2.xml"></atom:link><language>en</language><lastBuildDate>Thu, 01 May 2014 13:13:02 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Backporting Qt App from Python3 to Python2 (SIP API Versions)</title><link>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</link><description>&lt;div&gt;&lt;p&gt;The issue came up with trying to integrate parts of an existing Python3/Qt app
 (mikidown) into a Python2/Qt app.  After minor standard issues, like
 exceptions and print functions, many strange errors with respect to &lt;tt class="docutils literal"&gt;QString&lt;/tt&gt;
 and &lt;tt class="docutils literal"&gt;QVariant&lt;/tt&gt; handling showed up.&lt;/p&gt;
 &lt;p&gt;Searching for solution considering the different unicode string handling
 between Py2 &amp;amp; Py3 did not give any answers: the solution lay in the different
-PySide API versions for the different Python versions.&lt;/p&gt;
+&lt;tt class="docutils literal"&gt;PyQt4&lt;/tt&gt; API versions for the different Python versions.&lt;/p&gt;
 &lt;p&gt;An introduction to the &lt;a class="reference external" href="http://pyqt.sourceforge.net/Docs/PyQt4/incompatible_apis.html"&gt;incompatible PySide API&lt;/a&gt; gave insight in how the
 different versions are handled and how the used API version can be switched
 for a given python environment.&lt;/p&gt;
@@ -18,6 +18,7 @@ import sip
 sip.setapi('QString', 2)
 sip.setapi('QVariant', 2)
 &lt;/pre&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;PySide&lt;/tt&gt; only supports APIv2, I have to check &lt;tt class="docutils literal"&gt;PyQt5&lt;/tt&gt; as well.&lt;/p&gt;
 &lt;p&gt;My application for this is for the development of Markdown/reStructured text
 based wiki utilizing &lt;a class="reference external" href="https://github.com/rnons/mikidown"&gt;mikidown&lt;/a&gt; and &lt;a class="reference external" href="https://sourceforge.net/projects/retext/"&gt;ReText&lt;/a&gt;. Both target the &lt;cite&gt;Python3&lt;/cite&gt; but
-with the trick above, large number of issues were resolved.&lt;/p&gt;&lt;/div&gt;</description><category>PySide</category><category>Qt</category><category>Python3</category><category>Python2</category><category>backporting</category><category>API</category><guid>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</guid><pubDate>Wed, 23 Apr 2014 05:21:19 GMT</pubDate></item></channel></rss>
+with the trick above, large number of issues were resolved.&lt;/p&gt;&lt;/div&gt;</description><category>PyQt4</category><category>Python3</category><category>Python2</category><category>backporting</category><category>API</category><guid>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</guid><pubDate>Wed, 23 Apr 2014 05:21:19 GMT</pubDate></item></channel></rss>

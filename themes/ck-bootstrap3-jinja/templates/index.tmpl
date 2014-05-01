@@ -7,16 +7,17 @@
 {% if translations|length > 1 %}
     <li>{{ bootstrap.html_translations() }}</li>
 {% endif %}
-<strong>XXXX</strong>
 {% endblock %}
 {% block content %}
     {% for post in posts %}
         <article class="postbox h-entry post-{{ post.meta('type') }}">
-        <h1 class="p-name"><a href="{{ post.permalink() }}" class="u-url">{{ post.title() }}</a>
+        <h1 class="p-name"><a href="{{ post.permalink() }}" class="u-url">{{
+        post.title() }}</a></h1>
         <small>&nbsp;&nbsp;
-             {{ messages("Posted") }}: <time class="published dt-published" datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time>
+             {{ messages("Posted") }}: 
+             <time class="published dt-published" datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time>
 	     {{ phelper.html_list_tags(post) }}
-        </small></h1>
+        </small>
         <hr>
         {% if index_teasers %}
         <div class="p-summary">

@@ -88,6 +88,8 @@ NAVIGATION_LINKS = {
         ('/archive.html', 'Archives'),
         ('/categories/index.html', 'Tags'),
         ('/rss.xml', 'RSS'),
+        ('https://github.com/ckolumbus',
+         '<img src="images/blacktocat.png" alt="Follow me on GitHub">' )
     ),
 }
 

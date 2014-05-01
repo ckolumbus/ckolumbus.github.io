@@ -1,7 +1,8 @@
 .. title: Backporting Qt App from Python3 to Python2 (SIP API Versions)
 .. slug: backporting-qt-app-from-python3-to-python2-sip-api-versions
 .. date: 2014/04/23 07:21:19
-.. tags: PySide, Qt, Python3, Python2, backporting, API
+.. lastupdate: 2014/05/01 13:12:00
+.. tags: PyQt4, Python3, Python2, backporting, API
 .. link: 
 .. description: 
 .. type: text
@@ -13,7 +14,7 @@ and ``QVariant`` handling showed up.
 
 Searching for solution considering the different unicode string handling
 between Py2 & Py3 did not give any answers: the solution lay in the different
-PySide API versions for the different Python versions. 
+``PyQt4`` API versions for the different Python versions. 
 
 An introduction to the `incompatible PySide API`_ gave insight in how the
 different versions are handled and how the used API version can be switched
@@ -28,6 +29,9 @@ module::
 	import sip
 	sip.setapi('QString', 2)
 	sip.setapi('QVariant', 2)
+
+
+``PySide`` only supports APIv2, I have to check ``PyQt5`` as well.
 
 My application for this is for the development of Markdown/reStructured text
 based wiki utilizing `mikidown`_ and `ReText`_. Both target the `Python3` but 

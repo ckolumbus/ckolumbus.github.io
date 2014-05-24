@@ -14,9 +14,9 @@
         <h1 class="p-name"><a href="{{ post.permalink() }}" class="u-url">{{
         post.title() }}</a></h1>
         <small>&nbsp;&nbsp;
-             {{ messages("Posted") }}: 
+             {{ messages("Publication date") }}: 
              <time class="published dt-published" datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time>
-	     {{ phelper.html_list_tags(post) }}
+	     {{ phelper.html_tags(post) }}
         </small>
         <hr>
         {% if index_teasers %}

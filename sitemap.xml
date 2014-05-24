@@ -29,20 +29,12 @@
   <lastmod>2014-05-24</lastmod>
  </url>
  <url>
-  <loc>http://ckolumbus.github.io/categories/pyside.html</loc>
-  <lastmod>2014-05-01</lastmod>
- </url>
- <url>
   <loc>http://ckolumbus.github.io/categories/python2.html</loc>
   <lastmod>2014-05-24</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/categories/python3.html</loc>
   <lastmod>2014-05-24</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/categories/qt.html</loc>
-  <lastmod>2014-05-01</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/galleries/index.html</loc>
@@ -63,17 +55,5 @@
  <url>
   <loc>http://ckolumbus.github.io/posts/2014/04/first-github-posting.html</loc>
   <lastmod>2014-05-24</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/posts/2014/first-github-posting.html</loc>
-  <lastmod>2014-04-26</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/posts/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</loc>
-  <lastmod>2014-04-26</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/posts/first-github-posting.html</loc>
-  <lastmod>2014-04-26</lastmod>
  </url>
 </urlset>

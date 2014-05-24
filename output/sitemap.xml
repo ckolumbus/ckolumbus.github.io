@@ -6,38 +6,74 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://ckolumbus.github.io/2014/index.html</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/archive.html</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/api.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/backporting.html</loc>
+  <lastmod>2014-05-24</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/categories/index.html</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/pyqt4.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/pyside.html</loc>
+  <lastmod>2014-05-01</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/python2.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/python3.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/categories/qt.html</loc>
+  <lastmod>2014-05-01</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/galleries/index.html</loc>
-  <lastmod>2014-04-22</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/galleries/rss.xml</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/index.html</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/listings/index.html</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/posts/2014/04/first-github-posting.html</loc>
+  <lastmod>2014-05-24</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/posts/2014/first-github-posting.html</loc>
+  <lastmod>2014-04-26</lastmod>
+ </url>
+ <url>
+  <loc>http://ckolumbus.github.io/posts/backporting-qt-app-from-python3-to-python2-sip-api-versions.html</loc>
+  <lastmod>2014-04-26</lastmod>
  </url>
  <url>
   <loc>http://ckolumbus.github.io/posts/first-github-posting.html</loc>
-  <lastmod>2014-04-22</lastmod>
- </url>
- <url>
-  <loc>http://ckolumbus.github.io/rss.xml</loc>
-  <lastmod>2014-04-22</lastmod>
+  <lastmod>2014-04-26</lastmod>
  </url>
 </urlset>

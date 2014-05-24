@@ -1,9 +1,30 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Chris Drexler"><title>Backporting Qt App from Python3 to Python2 (SIP API Versions) | CKolumbus' Dev Blog</title><link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml"></head><body>
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Backporting Qt App from Python3 to Python2 (SIP API Versions) | CKolumbus' Dev Blog</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="Chris Drexler">
+<meta name="og:title" content="Backporting Qt App from Python3 to Python2 (SIP API Versions)">
+<meta name="og:url" content="http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html">
+<meta name="og:description" content="The issue came up with trying to integrate parts of an existing Python3/Qt app
+(mikidown) into a Python2/Qt app.  After minor standard issues, like
+exceptions and print functions, many strange errors ">
+<meta name="og:site_name" content="CKolumbus' Dev Blog">
+<meta name="og:type" content="article">
+</head>
+<body>
+
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container-fluid"><!-- This keeps the margins nice -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container">
+<!-- This keeps the margins nice -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -11,80 +32,63 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://ckolumbus.github.io/">CKolumbus' Dev Blog</a>
-        </div><!-- /.navbar-header -->
+            <a class="navbar-brand" href="http://ckolumbus.github.io/">
+
+                <span id="blog-title">CKolumbus' Dev Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav"><li><a href="../../../archive.html">Archives</a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../../rss.xml">RSS</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/ckolumbus"><img src="images/blacktocat.png" alt="Follow me on GitHub"></a>
-            
-        
-    
-
-            </li></ul><!-- Custom search --><form method="get" id="search" action="http://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="http://ckolumbus.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;"></form>
-<!-- End of custom search -->
-
-            
-
-            <ul class="nav navbar-nav navbar-right"><li>
-    <a href="backporting-qt-app-from-python3-to-python2-sip-api-versions.rst" id="sourcelink">Source</a>
-    </li>
-
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS</a>
+                </li>
+<li>
+<a href="https://github.com/ckolumbus"><img src="images/blacktocat.png" alt="Follow me on GitHub"></a>
 
                 
-            </ul></div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="http://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://ckolumbus.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="backporting-qt-app-from-python3-to-python2-sip-api-versions.rst" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
 </nav><!-- End of Menubar --><div class="container">
     <div class="body-content">
         <!--Body content-->
         <div class="row">
             
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Backporting Qt App from Python3 to Python2 (SIP API Versions)</h1>
-    
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Backporting Qt App from Python3 to Python2 (SIP API Versions)</a></h1>
 
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2014-04-23T07:21:19+02:00" itemprop="datePublished">2014-04-23 07:21</time>
-        
-    
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Chris Drexler</span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2014-04-23T07:21:19+02:00" itemprop="datePublished" title="Publication date">2014-04-23 07:21</time></a></p>
+                <p class="commentline">            <a href="backporting-qt-app-from-python3-to-python2-sip-api-versions.html#disqus_thread" data-disqus-identifier="cache/posts/2014/04/backporting-qt-app-from-python3-to-python2.html">Comments</a>
 
-        
-    
-          |  More posts about
-        
-            <a class="tag" href="../../../categories/pyqt4.html"><span class="badge badge-info">PyQt4</span></a>
-        
-            <a class="tag" href="../../../categories/python3.html"><span class="badge badge-info">Python3</span></a>
-        
-            <a class="tag" href="../../../categories/python2.html"><span class="badge badge-info">Python2</span></a>
-        
-            <a class="tag" href="../../../categories/backporting.html"><span class="badge badge-info">backporting</span></a>
-        
-            <a class="tag" href="../../../categories/api.html"><span class="badge badge-info">API</span></a>
-        
-    
 
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p>The issue came up with trying to integrate parts of an existing Python3/Qt app
+        </p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>The issue came up with trying to integrate parts of an existing Python3/Qt app
 (mikidown) into a Python2/Qt app.  After minor standard issues, like
 exceptions and print functions, many strange errors with respect to <tt class="docutils literal">QString</tt>
 and <tt class="docutils literal">QVariant</tt> handling showed up.</p>
@@ -106,23 +110,24 @@ sip.setapi('QVariant', 2)
 <p><tt class="docutils literal">PySide</tt> only supports APIv2, I have to check <tt class="docutils literal">PyQt5</tt> as well.</p>
 <p>My application for this is for the development of Markdown/reStructured text
 based wiki utilizing <a class="reference external" href="https://github.com/rnons/mikidown">mikidown</a> and <a class="reference external" href="https://sourceforge.net/projects/retext/">ReText</a>. Both target the <cite>Python3</cite> but
-with the trick above, large number of issues were resolved.</p></div>
+with the trick above, large number of issues were resolved.</p>
     </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="first-github-posting.html" rel="prev">← Previous post</a>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/api.html" rel="tag">API</a></li>
+           <li><a class="tag p-category" href="../../../categories/pyqt4.html" rel="tag">PyQt4</a></li>
+           <li><a class="tag p-category" href="../../../categories/python2.html" rel="tag">Python2</a></li>
+           <li><a class="tag p-category" href="../../../categories/python3.html" rel="tag">Python3</a></li>
+           <li><a class="tag p-category" href="../../../categories/backporting.html" rel="tag">backporting</a></li>
+        </ul>
+<ul class="pager">
+<li class="previous">
+                <a href="first-github-posting.html" rel="prev" title="First GitHub posting">Previous post</a>
             </li>
-        
-        
-        </ul><div id="disqus_thread"></div>
+        </ul></nav></aside><section class="comments"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="ckolumbusgithub",
-        
             disqus_url="http://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions.html",
-        
         disqus_title="Backporting Qt App from Python3 to Python2 (SIP API Versions)",
         disqus_identifier="cache/posts/2014/04/backporting-qt-app-from-python3-to-python2.html",
         disqus_config = function () {
@@ -133,25 +138,22 @@ with the trick above, large number of issues were resolved.</p></div>
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
+        </section></article><script>var disqus_shortname="ckolumbusgithub";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
         <!--End of body content-->
 
         <footer>
             Contents © 2014         <a href="mailto:ckolumbus@ac-drexler.de">Chris Drexler</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-        </footer></div>
+            
+        </footer>
+</div>
 </div>
 
-
-    
-        
-            <script src="../../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script></body></html>
+            <script src="../../../assets/js/all-nocdn.js"></script><script>jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>

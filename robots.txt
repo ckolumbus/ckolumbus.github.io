@@ -1,0 +1,2 @@
+Sitemap: http://ckolumbus.github.io/sitemapindex.xml
+

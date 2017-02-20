@@ -1,2 +1,4 @@
-Sitemap: http://ckolumbus.github.io/sitemapindex.xml
+Sitemap: https://ckolumbus.github.io/sitemapindex.xml
 
+User-Agent: *
+Host: ckolumbus.github.io

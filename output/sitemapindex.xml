@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://ckolumbus.github.io/categories/api.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/categories/api.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/categories/backporting.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/categories/backporting.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/categories/pyqt4.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/categories/pyqt4.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/categories/python2.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/categories/python2.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/categories/python3.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/categories/python3.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/galleries/rss.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/galleries/rss.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/rss.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/rss.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://ckolumbus.github.io/sitemap.xml</loc>
-  <lastmod>2014-05-24</lastmod>
+  <loc>https://ckolumbus.github.io/sitemap.xml</loc>
+  <lastmod>2017-02-20T17:43:00Z</lastmod>
  </sitemap>
 </sitemapindex>

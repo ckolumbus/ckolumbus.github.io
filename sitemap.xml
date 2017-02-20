@@ -7,54 +7,54 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://ckolumbus.github.io/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/2014/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/archive.html</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/api/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/backporting/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/pyqt4/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/python2/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/categories/python3/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/galleries/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/listings/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://ckolumbus.github.io/posts/2014/04/first-github-posting/</loc>
-  <lastmod>2017-02-20T17:43:00Z</lastmod>
+  <lastmod>2017-02-20T17:53:00Z</lastmod>
  </url>
 </urlset>

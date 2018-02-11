@@ -3,22 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>First GitHub posting | CKolumbus' Blog</title>
+<title>Problematic handling of array configuration items in ASP.Net core | CKolumbus' Blog</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
-<link rel="canonical" href="https://ckolumbus.github.io/posts/2014/04/first-github-posting/">
+<link rel="canonical" href="https://ckolumbus.github.io/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Chris Drexler">
-<link rel="next" href="../backporting-qt-app-from-python3-to-python2-sip-api-versions/" title="Backporting Qt App from Python3 to Python2 (SIP API Versions)" type="text/html">
+<link rel="prev" href="../../../2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" title="Backporting Qt App from Python3 to Python2 (SIP API Versions)" type="text/html">
 <meta property="og:site_name" content="CKolumbus' Blog">
-<meta property="og:title" content="First GitHub posting">
-<meta property="og:url" content="https://ckolumbus.github.io/posts/2014/04/first-github-posting/">
-<meta property="og:description" content="This is my first post on GitHub pages. I will (hopefully) continue to post
-my development related activies, loosly associated with my repositories.
-Chris">
+<meta property="og:title" content="Problematic handling of array configuration items in ASP.Net core">
+<meta property="og:url" content="https://ckolumbus.github.io/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/">
+<meta property="og:description" content="Example on how ASP.Net Core handles overwriting loaded array configuration
+when the later read config files contain less array entries than before.
+Arrays are not complete replaced but only the first ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2014-04-21T19:21:06+02:00">
+<meta property="article:published_time" content="2018-02-11T17:07:28+01:00">
+<meta property="article:tag" content="aspnetcore">
+<meta property="article:tag" content="configuration">
+<meta property="article:tag" content="dotnetcore">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -65,7 +68,7 @@ Chris">
 
             <ul class="nav navbar-nav navbar-right">
 <li>
-    <a href="index.rst" id="sourcelink">Source</a>
+    <a href="index.md" id="sourcelink">Source</a>
     </li>
 
                 
@@ -80,35 +83,110 @@ Chris">
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">First GitHub posting</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Problematic handling of array configuration items in ASP.Net core</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Chris Drexler
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2014-04-21T19:21:06+02:00" itemprop="datePublished" title="2014-04-21 19:21">2014-04-21 19:21</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2018-02-11T17:07:28+01:00" itemprop="datePublished" title="2018-02-11 17:07">2018-02-11 17:07</time></a></p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/2014/04/first-github-posting.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core.html">Comments</a>
 
 
             
         </p>
-<p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
 
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>This is my first post on GitHub pages. I will (hopefully) continue to post
-my development related activies, loosly associated with my repositories.</p>
-<p>Chris</p>
+<p>Example on how ASP.Net Core handles overwriting loaded array configuration
+when the later read config files contain less array entries than before.</p>
+<p>Arrays are not complete replaced but only the first <code>n</code> entries that are
+actully given in the later config files are being replaced, leaving</p>
+<h3>Exampmle configuration files</h3>
+<p><code>appsettings.json</code></p>
+<pre class="code literal-block"><span></span>{
+  "wizards": [
+    {
+      "Name": "Gandalf",
+      "Age": "1000"
+    },
+    {
+      "Name": "Harry",
+      "Age": "17"
+    }
+  ]
+}
+</pre>
+
+
+<p><code>appsettings2.json</code></p>
+<pre class="code literal-block"><span></span>{
+  "wizards": [
+    {
+      "Name": "Houdini",
+      "Age": "300"
+    }
+  ]
+}
+</pre>
+
+
+<h3>Setup</h3>
+<ul>
+<li>read appsettings.json with two entries in 'wizard'  array</li>
+<li>read additaonal appsettings2.json with only one array entry in 'wizards'</li>
+</ul>
+<h3>Code</h3>
+<pre class="code literal-block"><span></span>var builder = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .AddJsonFile("appsettings2.json");
+</pre>
+
+
+<h3>(My) Expected output</h3>
+<p>the array is replaced by the latest definition resulting in only one entry in the array</p>
+<pre class="code literal-block"><span></span>    [wizards, ]
+    [wizards:0, ]
+    [wizards:0:Name, Houdini]
+    [wizards:0:Age, 300]
+</pre>
+
+
+<h3>Real Output</h3>
+<p>only the first entry of the existing array is overwritten, the second one remains</p>
+<pre class="code literal-block"><span></span>    [wizards, ]
+    [wizards:1, ]
+    [wizards:1:Name, Harry]
+    [wizards:1:Age, 17]
+    [wizards:0, ]
+    [wizards:0:Name, Houdini]
+    [wizards:0:Age, 300]
+</pre>
+
+
+<h3>Issue</h3>
+<p>when having multiple sources of configuration items it's somehwat
+unexpected behavior that the ultimate entries of an array depends
+on how many entries have been given in the setting sources before.</p>
+<p>Expected behavor IMHO would be that the complete array would be
+replaced with the last set of entries. </p>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
-<li class="next">
-                <a href="../backporting-qt-app-from-python3-to-python2-sip-api-versions/" rel="next" title="Backporting Qt App from Python3 to Python2 (SIP API Versions)">Next post</a>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/aspnetcore/" rel="tag">aspnetcore</a></li>
+            <li><a class="tag p-category" href="../../../../categories/configuration/" rel="tag">configuration</a></li>
+            <li><a class="tag p-category" href="../../../../categories/dotnetcore/" rel="tag">dotnetcore</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" rel="prev" title="Backporting Qt App from Python3 to Python2 (SIP API Versions)">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -116,9 +194,9 @@ my development related activies, loosly associated with my repositories.</p>
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="ckolumbusgithub",
-            disqus_url="https://ckolumbus.github.io/posts/2014/04/first-github-posting/",
-        disqus_title="First GitHub posting",
-        disqus_identifier="cache/posts/2014/04/first-github-posting.html",
+            disqus_url="https://ckolumbus.github.io/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/",
+        disqus_title="Problematic handling of array configuration items in ASP.Net core",
+        disqus_identifier="cache/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core.html",
         disqus_config = function () {
             this.language = "en";
         };

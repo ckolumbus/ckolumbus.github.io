@@ -6,35 +6,71 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://ckolumbus.github.io/authors/chris-drexler-ckolumbusac-drexlerde.xml</loc>
+  <lastmod>2018-02-11T16:12:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/authors/chris-drexler.xml</loc>
+  <lastmod>2018-02-11T16:12:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://ckolumbus.github.io/categories/api.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/archlinux.xml</loc>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/arduino.xml</loc>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/aspnetcore.xml</loc>
+  <lastmod>2018-02-11T16:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/categories/backporting.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/cat_dev.xml</loc>
+  <lastmod>2018-02-11T16:17:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/cmdline.xml</loc>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/configuration.xml</loc>
+  <lastmod>2018-02-11T16:17:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://ckolumbus.github.io/categories/dotnetcore.xml</loc>
+  <lastmod>2018-02-11T16:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/categories/pyqt4.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/categories/python2.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/categories/python3.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T16:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/rss.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T16:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://ckolumbus.github.io/sitemap.xml</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
+  <lastmod>2018-02-11T16:21:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -9,6 +9,10 @@
 .. type: text
 -->
 
+This post refers to the handling of array configuration items as they 
+exist in [ASP.Net core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) since 1.0 up to now (rt 2.0.5, SDK 2.1.4)
+
+
 
 Example on how ASP.Net Core handles overwriting loaded array configuration
 when the later read config files contain less array entries than before.

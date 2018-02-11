@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="CKolumbus' Blog">
 <meta property="og:title" content="Problematic handling of array configuration items in ASP.Net core">
 <meta property="og:url" content="https://ckolumbus.github.io/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/">
-<meta property="og:description" content="Example on how ASP.Net Core handles overwriting loaded array configuration
-when the later read config files contain less array entries than before.
-Arrays are not complete replaced but only the first ">
+<meta property="og:description" content="This post refers to the handling of array configuration items as they 
+exist in ASP.Net core since 1.0 up to now (rt 2.0.5, SDK 2.1.4)
+Example on how ASP.Net Core handles overwriting loaded array conf">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-02-11T17:07:28+01:00">
 <meta property="article:tag" content="aspnetcore">
@@ -104,6 +104,8 @@ Arrays are not complete replaced but only the first ">
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
+<p>This post refers to the handling of array configuration items as they 
+exist in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/">ASP.Net core</a> since 1.0 up to now (rt 2.0.5, SDK 2.1.4)</p>
 <p>Example on how ASP.Net Core handles overwriting loaded array configuration
 when the later read config files contain less array entries than before.</p>
 <p>Arrays are not complete replaced but only the first <code>n</code> entries that are

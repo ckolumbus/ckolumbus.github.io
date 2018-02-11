@@ -88,11 +88,14 @@
     </header><div class="e-content entry-content">
     <div>
 <p>This post refers to the handling of array configuration items as they 
-exist in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/">ASP.Net core</a> since 1.0 up to now (rt 2.0.5, SDK 2.1.4)</p>
+exist in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/">ASP.Net core Configuration</a> 
+since 1.0 up to now (RT 2.0.5, SDK 2.1.4).</p>
 <p>Example on how ASP.Net Core handles overwriting loaded array configuration
 when the later read config files contain less array entries than before.</p>
 <p>Arrays are not complete replaced but only the first <code>n</code> entries that are
 actully given in the later config files are being replaced, leaving</p>
+<p>There is an <a href="https://github.com/ckolumbus/Example_Issue_AspnetConfigurationArrayOverwrite">repository</a> 
+with a complete working example demonstrating the following behavior.</p>
 <h3>Exampmle configuration files</h3>
 <p><code>appsettings.json</code></p>
 <pre class="code literal-block"><span></span>{

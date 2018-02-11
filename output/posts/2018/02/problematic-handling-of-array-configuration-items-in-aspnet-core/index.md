@@ -10,15 +10,17 @@
 -->
 
 This post refers to the handling of array configuration items as they 
-exist in [ASP.Net core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) since 1.0 up to now (rt 2.0.5, SDK 2.1.4)
-
-
+exist in [ASP.Net core Configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/) 
+since 1.0 up to now (RT 2.0.5, SDK 2.1.4).
 
 Example on how ASP.Net Core handles overwriting loaded array configuration
 when the later read config files contain less array entries than before.
 
 Arrays are not complete replaced but only the first `n` entries that are
 actully given in the later config files are being replaced, leaving
+
+There is an [repository](https://github.com/ckolumbus/Example_Issue_AspnetConfigurationArrayOverwrite) 
+with a complete working example demonstrating the following behavior.
 
 
 ## Exampmle configuration files 

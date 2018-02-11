@@ -286,15 +286,15 @@ COMPILERS = {
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
-# ONE_FILE_POSTS = True
+ONE_FILE_POSTS = True
 
 # Use date-based path when creating posts?
 # Can be enabled on a per-post basis with `nikola new_post -d`.
-# NEW_POST_DATE_PATH = False
+NEW_POST_DATE_PATH = False
 
 # What format to use when creating posts with date paths?
 # Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.
-# NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'
+NEW_POST_DATE_PATH_FORMAT = '%Y/%m'
 
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
@@ -643,6 +643,35 @@ GITHUB_COMMIT_SOURCE = True
 #    ".js": [filters.closure_compiler],
 #    ".jpg": ["jpegoptim --strip-all -m75 -v %s"],
 # }
+
+# Executable for the "yui_compressor" filter (defaults to 'yui-compressor').
+# YUI_COMPRESSOR_EXECUTABLE = 'yui-compressor'
+
+# Executable for the "closure_compiler" filter (defaults to 'closure-compiler').
+# CLOSURE_COMPILER_EXECUTABLE = 'closure-compiler'
+
+# Executable for the "optipng" filter (defaults to 'optipng').
+# OPTIPNG_EXECUTABLE = 'optipng'
+
+# Executable for the "jpegoptim" filter (defaults to 'jpegoptim').
+# JPEGOPTIM_EXECUTABLE = 'jpegoptim'
+
+# Executable for the "html_tidy_withconfig", "html_tidy_nowrap",
+# "html_tidy_wrap", "html_tidy_wrap_attr" and "html_tidy_mini" filters
+# (defaults to 'tidy5').
+# HTML_TIDY_EXECUTABLE = 'tidy5'
+
+# List of XPath expressions which should be used for finding headers
+# ({hx} is replaced by headers h1 through h6).
+# You must change this if you use a custom theme that does not use
+# "e-content entry-content" as a class for post and page contents.
+# HEADER_PERMALINKS_XPATH_LIST = ['*//div[@class="e-content entry-content"]//{hx}']
+# Include *every* header (not recommended):
+# HEADER_PERMALINKS_XPATH_LIST = ['*//{hx}']
+
+# File blacklist for header permalinks. Contains output path
+# (eg. 'output/index.html')
+# HEADER_PERMALINKS_FILE_BLACKLIST = []
 
 # Expert setting! Create a gzipped copy of each generated file. Cheap server-
 # side optimization for very high traffic sites or low memory servers.
@@ -1000,7 +1029,8 @@ PRETTY_URLS = True
 # Do you want a add a Mathjax config file?
 # MATHJAX_CONFIG = ""
 
-# If you are using the compile-ipynb plugin, just add this one:
+# If you want support for the $.$ syntax (which may conflict with running
+# text!), just use this config:
 # MATHJAX_CONFIG = """
 # <script type="text/x-mathjax-config">
 # MathJax.Hub.Config({
@@ -1017,11 +1047,8 @@ PRETTY_URLS = True
 # </script>
 # """
 
-# Want to use KaTeX instead of MathJax? While KaTeX is less featureful,
-# it's faster and the output looks better.
-# If you set USE_KATEX to True, you also need to add an extra CSS file
-# like this:
-# EXTRA_HEAD_DATA = """<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">"""
+# Want to use KaTeX instead of MathJax? While KaTeX may not support every
+# feature yet, it's faster and the output looks better.
 # USE_KATEX = False
 
 # If you want to use the old (buggy) inline math $.$ with KaTeX, then

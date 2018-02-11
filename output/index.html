@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://ckolumbus.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -68,10 +68,103 @@
             
 
     
+
+
+    
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" class="u-url">Backporting Qt App from Python3 to Python2 (SIP API Versions)</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/" class="u-url">Problematic handling of array configuration items in ASP.Net core</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Chris Drexler
+            </span></p>
+            <p class="dateline"><a href="posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/" rel="bookmark"><time class="published dt-published" datetime="2018-02-11T17:07:28+01:00" title="2018-02-11 17:07">2018-02-11 17:07</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/#disqus_thread" data-disqus-identifier="cache/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Example on how ASP.Net Core handles overwriting loaded array configuration
+when the later read config files contain less array entries than before.</p>
+<p>Arrays are not complete replaced but only the first <code>n</code> entries that are
+actully given in the later config files are being replaced, leaving</p>
+<h3>Exampmle configuration files</h3>
+<p><code>appsettings.json</code></p>
+<pre class="code literal-block"><span></span>{
+  "wizards": [
+    {
+      "Name": "Gandalf",
+      "Age": "1000"
+    },
+    {
+      "Name": "Harry",
+      "Age": "17"
+    }
+  ]
+}
+</pre>
+
+
+<p><code>appsettings2.json</code></p>
+<pre class="code literal-block"><span></span>{
+  "wizards": [
+    {
+      "Name": "Houdini",
+      "Age": "300"
+    }
+  ]
+}
+</pre>
+
+
+<h3>Setup</h3>
+<ul>
+<li>read appsettings.json with two entries in 'wizard'  array</li>
+<li>read additaonal appsettings2.json with only one array entry in 'wizards'</li>
+</ul>
+<h3>Code</h3>
+<pre class="code literal-block"><span></span>var builder = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .AddJsonFile("appsettings2.json");
+</pre>
+
+
+<h3>(My) Expected output</h3>
+<p>the array is replaced by the latest definition resulting in only one entry in the array</p>
+<pre class="code literal-block"><span></span>    [wizards, ]
+    [wizards:0, ]
+    [wizards:0:Name, Houdini]
+    [wizards:0:Age, 300]
+</pre>
+
+
+<h3>Real Output</h3>
+<p>only the first entry of the existing array is overwritten, the second one remains</p>
+<pre class="code literal-block"><span></span>    [wizards, ]
+    [wizards:1, ]
+    [wizards:1:Name, Harry]
+    [wizards:1:Age, 17]
+    [wizards:0, ]
+    [wizards:0:Name, Houdini]
+    [wizards:0:Age, 300]
+</pre>
+
+
+<h3>Issue</h3>
+<p>when having multiple sources of configuration items it's somehwat
+unexpected behavior that the ultimate entries of an array depends
+on how many entries have been given in the setting sources before.</p>
+<p>Expected behavor IMHO would be that the complete array would be
+replaced with the last set of entries. </p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" class="u-url">Backporting Qt App from Python3 to Python2 (SIP API Versions)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Chris Drexler
             </span></p>
             <p class="dateline"><a href="posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/" rel="bookmark"><time class="published dt-published" datetime="2014-04-23T07:21:19+02:00" title="2014-04-23 07:21">2014-04-23 07:21</time></a></p>
@@ -111,7 +204,7 @@ with the trick above, large number of issues were resolved.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2014/04/first-github-posting/" class="u-url">First GitHub posting</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Chris Drexler
             </span></p>
             <p class="dateline"><a href="posts/2014/04/first-github-posting/" rel="bookmark"><time class="published dt-published" datetime="2014-04-21T19:21:06+02:00" title="2014-04-21 19:21">2014-04-21 19:21</time></a></p>
@@ -140,7 +233,7 @@ my development related activies, loosly associated with my repositories.</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2017         <a href="mailto:ckolumbus@ac-drexler.de">Chris Drexler</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2018         <a href="mailto:ckolumbus@ac-drexler.de">Chris Drexler</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

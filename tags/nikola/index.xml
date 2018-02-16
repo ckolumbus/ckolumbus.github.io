@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nikola on CKolumbus&#39; Blog</title>
+    <link>https://ckolumbus.github.io/tags/nikola/</link>
+    <description>Recent content in Nikola on CKolumbus&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Feb 2018 17:33:01 +0100</lastBuildDate>
+    
+	<atom:link href="https://ckolumbus.github.io/tags/nikola/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog Switch From Nikola to Hugo</title>
+      <link>https://ckolumbus.github.io/post/2018/02/blog-switch-from-nikola-to-hugo/</link>
+      <pubDate>Fri, 16 Feb 2018 17:33:01 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/post/2018/02/blog-switch-from-nikola-to-hugo/</guid>
+      <description>After starting to look more int GO programming I also inteded to revive my outdated blog on github. Although I&amp;rsquo;m veteran Pythonista I felt a little bit stuck with the complexity and the missing reactive designs of Nikola with which I started my blog.
+Digging more into the Go ecosystem I stumpled across Hugo and played around for a night, and with my limited number of existing posts swichting was easily done.</description>
+    </item>
+    
+  </channel>
+</rss>

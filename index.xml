@@ -53,13 +53,13 @@ Chris</description>
     </item>
     
     <item>
-      <title>Blog-License</title>
+      <title>License</title>
       <link>https://ckolumbus.github.io/license/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ckolumbus.github.io/license/</guid>
-      <description>All information on this site is covered by the CC-BY-4.0 License, if not stated explicitely otherwise.
-Please check the CreativeCommons Site o see how to comply with this license.</description>
+      <description>All information on this site is published under the CC-BY-4.0 License if not stated explicitely otherwise.
+Please check the CreativeCommons Site on how to comply with this license.</description>
     </item>
     
   </channel>

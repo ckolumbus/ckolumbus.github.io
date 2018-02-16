@@ -20,7 +20,7 @@ There is an [repository](https://github.com/ckolumbus/Example_Issue_AspnetConfig
 with a complete working example demonstrating the following behavior.
 
 
-## Exampmle configuration files 
+## Example configuration files 
 
 `appsettings.json`
 

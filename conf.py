@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Chris Drexler"  # (translatable)
-BLOG_TITLE = "CKolumbus' Blog"  # (translatable)
+BLOG_TITLE = "<img src=\"/images/ckolumbus.jpg\" height=\"40\"> CKolumbus' Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://ckolumbus.github.io/"
@@ -26,7 +26,7 @@ SITE_URL = "https://ckolumbus.github.io/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://ckolumbus.github.io/"
 BLOG_EMAIL = "ckolumbus@ac-drexler.de"
-BLOG_DESCRIPTION = "development rumblings: linux, python, arduino and more"  # (translatable)
+BLOG_DESCRIPTION = "development rumblings: linux, python, go, C#, .Net Core, arduino and more"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -134,16 +134,38 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/", "Home"),
+        ("/blog/" , "Blog"),
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
         ('https://github.com/ckolumbus',
-         '<img src="images/blacktocat.png" alt="Follow me on GitHub">' )
+         '<img src="/images/blacktocat.png" alt="Follow me on GitHub">' )
     ),
 }
+GLOBAL_CONTEXT = {'blog_sidebar': """\
+<div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>This is my little development blog with some additional
+      pages of information </p>
+</div>
+<div class="sidebar-module">
+  <h4>Pages</h4>
+  <ol class="list-unstyled">
+    <li><a href="/pages/languages/go">GOLang</a></li>
+    <li><a href="/pages/languages/python">Python</a></li>
+    <li><a href="/pages/languages/dotnet">.Net Core/C#</a></li>
+  </ol>
+  <h4>Social</h4>
+  <ol class="list-unstyled">
+    <li><a href="https://twitter.com/CKolumbus_">@CKolumbus_</a></li>
+  </ol>
+</div>
+"""}
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+#THEME = "bootstrap3"
+THEME = "bootblog"
 #THEME = "ck-bootstrap3"
 
 # Primary color of your theme. This will be used to customize your theme and
@@ -185,10 +207,10 @@ THEME_COLOR = '#5670d4'
 #     )
 
 POSTS = (
-    ("posts/*.rst" , "posts", "post.tmpl"),
-    ("posts/*.md"  , "posts", "post.tmpl"),
-    ("posts/*.txt" , "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.rst" , "blog", "post.tmpl"),
+    ("posts/*.md"  , "blog", "post.tmpl"),
+    ("posts/*.txt" , "blog", "post.tmpl"),
+    ("posts/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst" , "pages", "story.tmpl"),
@@ -290,7 +312,7 @@ ONE_FILE_POSTS = True
 
 # Use date-based path when creating posts?
 # Can be enabled on a per-post basis with `nikola new_post -d`.
-NEW_POST_DATE_PATH = False
+NEW_POST_DATE_PATH = True
 
 # What format to use when creating posts with date paths?
 # Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.
@@ -505,7 +527,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+#INDEX_PATH = ""
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -1316,7 +1338,7 @@ USE_BUNDLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+#GLOBAL_CONTEXT = {}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be

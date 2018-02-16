@@ -16,7 +16,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params]
     author = "Chris Drexler" # Author's name (appears in meta tags and under posts)
-    subtitle = "by Chris Drexler" # Subtitle of your site. Used in site header
+    subtitle = "development rumblings: linux, python, go, C#, .Net Core, arduino and more" # Subtitle of your site. Used in site header
     description = "development rumblings: linux, python, go, C#, .Net Core, arduino and more" # Description of your site. Used in meta description
     opengraph = true # Enable OpenGraph if true
     readmore = false # Show "Read more" button in list if true

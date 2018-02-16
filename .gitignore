@@ -1,5 +1,2 @@
-.doit.*
-__pycache__
-cache
-*.pyc
 *.swp
+public

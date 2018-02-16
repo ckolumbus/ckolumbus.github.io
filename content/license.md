@@ -1,5 +1,7 @@
 ---
-title: "License"
+title: "Blog-License"
+menu: "main"
+weight: 0
 type: license
 ---
 

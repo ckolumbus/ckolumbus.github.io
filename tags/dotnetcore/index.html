@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categories</title>
+<title>Dotnetcore</title>
 <meta name="description" content="development rumblings: linux, python, go, C#, .Net Core, arduino and more">
 <meta name="generator" content="Hugo 0.36.1" />
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="Dotnetcore" />
 <meta property="og:description" content="development rumblings: linux, python, go, C#, .Net Core, arduino and more" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://ckolumbus.github.io/categories/" />
+<meta property="og:url" content="https://ckolumbus.github.io/tags/dotnetcore/" />
 
 
 
@@ -26,7 +26,7 @@
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-<link rel="alternate" type="application/rss+xml" title="CKolumbus&#39; Blog Feed" href="https://ckolumbus.github.io/categories/index.xml">
+<link rel="alternate" type="application/rss+xml" title="CKolumbus&#39; Blog Feed" href="https://ckolumbus.github.io/tags/dotnetcore/index.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -56,12 +56,12 @@
 
 	<main class="main-content list content" role="main">
 		<header class="page-header">
-			<h1 class="page-header__title">Categories</h1>
+			<h1 class="page-header__title">Dotnetcore</h1>
 		</header><article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/categories/blog/" rel="bookmark">Blog</a>
+				<a href="/post/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/" rel="bookmark">Problematic handling of array configuration items in ASP.Net core</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
@@ -69,7 +69,9 @@
 			</div>
 		</header>
 		<div class="list__excerpt">
-			
+			This post refers to the handling of array configuration items as they exist in ASP.Net core Configuration since 1.0 up to now (RT 2.0.5, SDK 2.1.4).
+Example on how ASP.Net Core handles overwriting loaded array configuration when the later read config files contain less array entries than before.
+Arrays are not complete replaced but only the first n entries that are actully given in the later config files are being replaced, leaving
 		</div>
 	</div>
 </article>

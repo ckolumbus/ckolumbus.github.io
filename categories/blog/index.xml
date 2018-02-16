@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on CKolumbus&#39; Blog</title>
+    <link>https://ckolumbus.github.io/categories/blog/</link>
+    <description>Recent content in Blog on CKolumbus&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Feb 2018 17:07:28 +0100</lastBuildDate>
+    
+	<atom:link href="https://ckolumbus.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Problematic handling of array configuration items in ASP.Net core</title>
+      <link>https://ckolumbus.github.io/post/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/</link>
+      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/post/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/</guid>
+      <description>This post refers to the handling of array configuration items as they exist in ASP.Net core Configuration since 1.0 up to now (RT 2.0.5, SDK 2.1.4).
+Example on how ASP.Net Core handles overwriting loaded array configuration when the later read config files contain less array entries than before.
+Arrays are not complete replaced but only the first n entries that are actully given in the later config files are being replaced, leaving</description>
+    </item>
+    
+    <item>
+      <title>Backporting Qt App from Python3 to Python2 (SIP API Versions)</title>
+      <link>https://ckolumbus.github.io/post/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</link>
+      <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/post/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</guid>
+      <description>The issue came up with trying to integrate parts of an existing Python3/Qt app (mikidown) into a Python2/Qt app. After minor standard issues, like exceptions and print functions, many strange errors with respect to QString and QVariant handling showed up.
+Searching for solution considering the different unicode string handling between Py2 &amp;amp; Py3 did not give any answers: the solution lay in the different PyQt4 API versions for the different Python versions.</description>
+    </item>
+    
+  </channel>
+</rss>

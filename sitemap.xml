@@ -1,84 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
- <url>
-  <loc>https://ckolumbus.github.io/</loc>
-  <lastmod>2018-02-11T16:12:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/2014/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/2018/</loc>
-  <lastmod>2018-02-11T16:12:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/archive.html</loc>
-  <lastmod>2018-02-11T16:21:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/</loc>
-  <lastmod>2018-02-11T16:22:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/api/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/aspnetcore/</loc>
-  <lastmod>2018-02-11T16:17:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/backporting/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/cat_dev/</loc>
-  <lastmod>2018-02-11T16:17:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/configuration/</loc>
-  <lastmod>2018-02-11T16:17:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/dotnetcore/</loc>
-  <lastmod>2018-02-11T16:17:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/pyqt4/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/python2/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/categories/python3/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/galleries/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/listings/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/posts/2014/04/first-github-posting/</loc>
-  <lastmod>2017-02-20T17:53:00Z</lastmod>
- </url>
- <url>
-  <loc>https://ckolumbus.github.io/posts/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/</loc>
-  <lastmod>2018-02-11T16:12:00Z</lastmod>
- </url>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://ckolumbus.github.io/post/2018/02/problematic-handling-of-array-configuration-items-in-aspnet-core/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/post/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/post/2014/04/first-github-posting/</loc>
+    <lastmod>2014-04-21T19:21:06+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/api/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/aspnetcore/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/backporting/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/categories/blog/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/categories/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/configuration/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/dotnetcore/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/post/</loc>
+    <lastmod>2018-02-11T17:07:28+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/pyqt4/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/python2/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/python3/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/</loc>
+    <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
 </urlset>

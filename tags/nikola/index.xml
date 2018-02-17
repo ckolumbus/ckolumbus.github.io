@@ -13,10 +13,10 @@
     
     <item>
       <title>Blog Switch From Nikola to Hugo</title>
-      <link>https://ckolumbus.github.io/posts/2018/02/blog-switch-from-nikola-to-hugo/</link>
+      <link>https://ckolumbus.github.io/post/2018/02/blog-switch-from-nikola-to-hugo/</link>
       <pubDate>Fri, 16 Feb 2018 17:33:01 +0100</pubDate>
       
-      <guid>https://ckolumbus.github.io/posts/2018/02/blog-switch-from-nikola-to-hugo/</guid>
+      <guid>https://ckolumbus.github.io/post/2018/02/blog-switch-from-nikola-to-hugo/</guid>
       <description>After starting to look more int GO programming I also inteded to revive my outdated blog on github. Although I&amp;rsquo;m veteran Pythonista I felt a little bit stuck with the complexity and the missing reactive designs of Nikola with which I started my blog.
 Digging more into the Go ecosystem I stumpled across Hugo and played around for a night, and with my limited number of existing posts swichting was easily done.</description>
     </item>

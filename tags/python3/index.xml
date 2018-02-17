@@ -13,10 +13,10 @@
     
     <item>
       <title>Backporting Qt App from Python3 to Python2 (SIP API Versions)</title>
-      <link>https://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</link>
+      <link>https://ckolumbus.github.io/post/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</link>
       <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
       
-      <guid>https://ckolumbus.github.io/posts/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</guid>
+      <guid>https://ckolumbus.github.io/post/2014/04/backporting-qt-app-from-python3-to-python2-sip-api-versions/</guid>
       <description>The issue came up with trying to integrate parts of an existing Python3/Qt app (mikidown) into a Python2/Qt app. After minor standard issues, like exceptions and print functions, many strange errors with respect to QString and QVariant handling showed up.
 Searching for solution considering the different unicode string handling between Py2 &amp;amp; Py3 did not give any answers: the solution lay in the different PyQt4 API versions for the different Python versions.</description>
     </item>

@@ -30,8 +30,8 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     #sectionPagesMenu = "main"
 
 
-[permalinks]
-  post = "posts/:year/:month/:slug/"
+#[permalinks]
+#  post = "post/:year/:month/:slug/"
 
 [taxonomies]
   tag = "tags"

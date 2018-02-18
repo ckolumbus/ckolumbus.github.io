@@ -6,10 +6,33 @@
     <description>Recent content in Posts on CKolumbus&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Feb 2018 17:33:01 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2018 19:14:10 +0100</lastBuildDate>
     
 	<atom:link href="https://ckolumbus.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang Dependency Injection With karlkfi/inject</title>
+      <link>https://ckolumbus.github.io/post/2018/02/golang-dependency-injection-with-karlkfi-inject/</link>
+      <pubDate>Sun, 18 Feb 2018 19:14:10 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/post/2018/02/golang-dependency-injection-with-karlkfi-inject/</guid>
+      <description>&lt;p&gt;While investigating the pros and cons of manual ctor and IoC based dependency injection
+in &lt;a href=&#34;http://golang.com&#34;&gt;go&lt;/a&gt; I looked at several IoC solutions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/karlkfi/inject&#34;&gt;karlkfi/inject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebookgo/inject&#34;&gt;facebookgo/inject&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/magic003/alice&#34;&gt;magic003/alice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I was astonished by &lt;a href=&#34;https://github.com/karlkfi/inject&#34;&gt;karlkfi/inject&lt;/a&gt; how I was
+able to switch to an IoC with &lt;strong&gt;NO CHANGES WHASOVER&lt;/strong&gt; on my ctor DI based classes.&lt;/p&gt;
+
+&lt;p&gt;Check out the small changes yourself below or on &lt;a href=&#34;https://github.com/ckolumbus/golangRestApiExampleWithDependencyInjection/commit/0c43952092e1f313e1a73a0c3cb938fed595e386#diff-77339446d6d7a72280ed646533aa22ae&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Blog Switch From Nikola to Hugo</title>

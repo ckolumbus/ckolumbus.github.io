@@ -6,10 +6,22 @@
     <description>Recent content in Posts on CKolumbus&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Feb 2018 19:14:10 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 22 Feb 2018 10:20:03 +0100</lastBuildDate>
     
 	<atom:link href="https://ckolumbus.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building Timewarrior and Taskwarrior with msys2/mingw</title>
+      <link>https://ckolumbus.github.io/post/2018/02/building-timewarrior-and-taskwarrior-with-msys2-mingw/</link>
+      <pubDate>Thu, 22 Feb 2018 10:20:03 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/post/2018/02/building-timewarrior-and-taskwarrior-with-msys2-mingw/</guid>
+      <description>&lt;p&gt;This post describes how to build &lt;a href=&#34;https://github.com/GothenburgBitFactory/taskwarrior&#34;&gt;taskwarrior&lt;/a&gt; and &lt;a href=&#34;https://github.com/GothenburgBitFactory/timewarrior&#34;&gt;timewarrior&lt;/a&gt; from github
+sources on a Windows system using msys &amp;amp; mingw.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Golang Dependency Injection With karlkfi/inject</title>

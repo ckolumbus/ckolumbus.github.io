@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ckolumbus.github.io/post/2018/02/building-timewarrior-and-taskwarrior-with-msys2-mingw/</loc>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ckolumbus.github.io/post/2018/02/golang-dependency-injection-with-karlkfi-inject/</loc>
     <lastmod>2018-02-18T19:14:10+01:00</lastmod>
   </url>
@@ -47,19 +52,19 @@
   
   <url>
     <loc>https://ckolumbus.github.io/categories/blog/</loc>
-    <lastmod>2018-02-18T19:14:10+01:00</lastmod>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ckolumbus.github.io/</loc>
-    <lastmod>2018-02-18T19:14:10+01:00</lastmod>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ckolumbus.github.io/categories/</loc>
-    <lastmod>2018-02-18T19:14:10+01:00</lastmod>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -98,6 +103,12 @@
   </url>
   
   <url>
+    <loc>https://ckolumbus.github.io/tags/mingw/</loc>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ckolumbus.github.io/tags/nikola/</loc>
     <lastmod>2018-02-16T17:33:01+01:00</lastmod>
     <priority>0</priority>
@@ -105,7 +116,7 @@
   
   <url>
     <loc>https://ckolumbus.github.io/post/</loc>
-    <lastmod>2018-02-18T19:14:10+01:00</lastmod>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,6 +141,12 @@
   <url>
     <loc>https://ckolumbus.github.io/tags/</loc>
     <lastmod>2014-04-23T19:21:19+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ckolumbus.github.io/tags/tools/</loc>
+    <lastmod>2018-02-22T10:20:03+01:00</lastmod>
     <priority>0</priority>
   </url>
   

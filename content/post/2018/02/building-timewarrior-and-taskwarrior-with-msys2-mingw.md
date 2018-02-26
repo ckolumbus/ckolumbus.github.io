@@ -1,6 +1,7 @@
 ---
 title: "Building Timewarrior and Taskwarrior with msys2/mingw"
 date: 2018-02-22T10:20:03+01:00
+lastmod: 2018-02-26T14:22:00+01:00
 categories: ["Blog"]
 tags: ["mingw", "tools"]
 ---
@@ -8,6 +9,7 @@ tags: ["mingw", "tools"]
 This post describes how to build [taskwarrior][taskwarrior] and [timewarrior][timewarrior] from github
 sources on a Windows system using msys & mingw.
 
+**2018-02-26 Update**:  added information about run-time dependencies
 [taskwarrior]: https://github.com/GothenburgBitFactory/taskwarrior
 [timewarrior]: https://github.com/GothenburgBitFactory/timewarrior
 <!--more-->
@@ -47,6 +49,18 @@ pacman -S msys2-devel make cmake git
 
 ```
 pacman -S libgnutls-devel  python  libutil-linux-devel
+```
+
+During run-time the following package is needed
+
+```
+pacman -S libhogweed
+```
+
+if the `libhogweed` is not installed you will get the following (not very helpful) error message: 
+
+```
+error while loading shared libraries: ?: cannot open shared object file: No such file or directory
 ```
 
 I did not need to install any `mingw32/mingw-w64-i686-gcc` (coming with the `mingw-w64-i686-toolchain` bundle) 

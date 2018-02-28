@@ -20,7 +20,10 @@
       <description>&lt;p&gt;This post describes how to build &lt;a href=&#34;https://github.com/GothenburgBitFactory/taskwarrior&#34;&gt;taskwarrior&lt;/a&gt; and &lt;a href=&#34;https://github.com/GothenburgBitFactory/timewarrior&#34;&gt;timewarrior&lt;/a&gt; from github
 sources on a Windows system using msys &amp;amp; mingw.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2018-02-26 Update&lt;/strong&gt;:  added information about run-time dependencies&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2018-02-28 Update&lt;/strong&gt;:  clarified the use of &lt;code&gt;msys2&lt;/code&gt; shell&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2018-02-26 Update&lt;/strong&gt;:  added information about run-time dependencies&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

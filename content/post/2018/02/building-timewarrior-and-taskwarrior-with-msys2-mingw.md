@@ -1,7 +1,7 @@
 ---
 title: "Building Timewarrior and Taskwarrior with msys2/mingw"
 date: 2018-02-22T10:20:03+01:00
-lastmod: 2018-02-26T14:22:00+01:00
+lastmod: 2018-02-28T10:22:00+01:00
 categories: ["Blog"]
 tags: ["mingw", "tools"]
 ---
@@ -9,13 +9,15 @@ tags: ["mingw", "tools"]
 This post describes how to build [taskwarrior][taskwarrior] and [timewarrior][timewarrior] from github
 sources on a Windows system using msys & mingw.
 
-**2018-02-26 Update**:  added information about run-time dependencies
+* **2018-02-28 Update**:  clarified the use of `msys2` shell 
+* **2018-02-26 Update**:  added information about run-time dependencies
+
 [taskwarrior]: https://github.com/GothenburgBitFactory/taskwarrior
 [timewarrior]: https://github.com/GothenburgBitFactory/timewarrior
 <!--more-->
 
 ## Install Environment
-* install [msys2][msys2] according to [this installation procedure][msys2]. I used the `x86_64` 64-bit 
+* install [msys2][] according to [this installation procedure][msys2]. I used the `x86_64` 64-bit 
   version (e.g. `msys2-x86_64-20161025.exe`)
 * execute
 
@@ -29,9 +31,9 @@ msys2-x86_64-20161025.exe
 pacman -Syu
 ```
 
-accept all "replacement" suggestions, after the update kill shell
+accept all "replacement" suggestions, after the update kill shell.
 
-and then once more open new shell  execute agin
+Then once more open a shell and update the remaining system.
 
 ```
 pacman -Syu
@@ -63,28 +65,42 @@ if the `libhogweed` is not installed you will get the following (not very helpfu
 error while loading shared libraries: ?: cannot open shared object file: No such file or directory
 ```
 
-I did not need to install any `mingw32/mingw-w64-i686-gcc` (coming with the `mingw-w64-i686-toolchain` bundle) 
-or `mingw64/mingw-w64-x86_64-gcc` (coming with the `mingw-w64-x86_64-toolchain` bundle) compilers. on the contrary, 
-I was quite unsuccesfull trying to do so ;-).
 
-## Building Taskwarrior
+## Build environment
+
+I did not need to install any `mingw32/mingw-w64-i686-gcc` (coming with the `mingw-w64-i686-toolchain` bundle) 
+or `mingw64/mingw-w64-x86_64-gcc` (coming with the `mingw-w64-x86_64-toolchain` bundle) compilers. On the contrary, 
+I was quite unsuccesfull trying to do so ;-). 
+
+That's why the `msys2` shell  is needed which sets the environment in such a way that the `mingw` compiler is not used
+if it is installed in parallel to the msys toolchaiun
+    .
+This shell can be opend e.g. from a normal `cmd.exe` shell by calling
+
+```
+c:\msys2\msys2_shell.cmd -msys2
+```
+
+The following build action shall be done within this shell.
+
+### Building Taskwarrior
 
 ```
 cd /usr/src
 git clone --recursive -b 2.6.0 https://github.com/GothenburgBitFactory/taskwarrior.git
 cd taskwarrior
-cmake -DCMAKE_SYSTEM_NAME=CYGWIN-GNU  -DCMAKE_BUILD_TYPE=release .
+cmake -DCMAKE_BUILD_TYPE=release .
 make
 make install
 ```
 
-## Building Timewarrior
+### Building Timewarrior
 
 ```
 cd /usr/src
 git clone --recursive -b 1.1.1 https://github.com/GothenburgBitFactory/timewarrior.git
 cd timewarrior
-cmake -DCMAKE_SYSTEM_NAME=CYGWIN-GNU  -DCMAKE_BUILD_TYPE=release .
+cmake -DCMAKE_BUILD_TYPE=release .
 make
 make install
 ```
@@ -119,7 +135,7 @@ and then continure with the  `cmake ...` command above.
 to run my personal timewarrior reports the following steps have to be done in addition
 
 ```
-pacman -S python3-setuptools
+pacman -S python3-pip
 pip install PyYaml python-dateutil timew-report
 ```
 

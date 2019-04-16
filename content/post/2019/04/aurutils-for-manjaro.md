@@ -15,5 +15,5 @@ directory
 Workaround : manually create or link `.arch-chroot`, issue is currently
 discussed with the maintainer.
 
-
-
+check [issue on Manjaro
+Gitlab](https://gitlab.manjaro.org/tools/development-tools/devtools/issues/1).

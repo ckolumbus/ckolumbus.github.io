@@ -14,3 +14,7 @@ unset CARCH
 ```
 
 or similar
+
+also missing `/usr/share/devtools/makepkg-armv7l.conf`
+
+can this be derived from `makepkg-x86_64.conf`?

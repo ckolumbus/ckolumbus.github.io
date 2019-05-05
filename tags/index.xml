@@ -6,49 +6,31 @@
     <description>Recent content in Tags on CKolumbus&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Apr 2014 19:21:19 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 22 Feb 2018 10:20:03 +0100</lastBuildDate>
     
 	<atom:link href="https://ckolumbus.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Api</title>
-      <link>https://ckolumbus.github.io/tags/api/</link>
-      <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
+      <title>mingw</title>
+      <link>https://ckolumbus.github.io/tags/mingw/</link>
+      <pubDate>Thu, 22 Feb 2018 10:20:03 +0100</pubDate>
       
-      <guid>https://ckolumbus.github.io/tags/api/</guid>
+      <guid>https://ckolumbus.github.io/tags/mingw/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Aspnetcore</title>
-      <link>https://ckolumbus.github.io/tags/aspnetcore/</link>
-      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
+      <title>tools</title>
+      <link>https://ckolumbus.github.io/tags/tools/</link>
+      <pubDate>Thu, 22 Feb 2018 10:20:03 +0100</pubDate>
       
-      <guid>https://ckolumbus.github.io/tags/aspnetcore/</guid>
+      <guid>https://ckolumbus.github.io/tags/tools/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Backporting</title>
-      <link>https://ckolumbus.github.io/tags/backporting/</link>
-      <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
-      
-      <guid>https://ckolumbus.github.io/tags/backporting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>https://ckolumbus.github.io/tags/configuration/</link>
-      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
-      
-      <guid>https://ckolumbus.github.io/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dependency Injection</title>
+      <title>dependency injection</title>
       <link>https://ckolumbus.github.io/tags/dependency-injection/</link>
       <pubDate>Sun, 18 Feb 2018 19:14:10 +0100</pubDate>
       
@@ -57,16 +39,7 @@
     </item>
     
     <item>
-      <title>Dotnetcore</title>
-      <link>https://ckolumbus.github.io/tags/dotnetcore/</link>
-      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
-      
-      <guid>https://ckolumbus.github.io/tags/dotnetcore/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
+      <title>go</title>
       <link>https://ckolumbus.github.io/tags/go/</link>
       <pubDate>Sun, 18 Feb 2018 19:14:10 +0100</pubDate>
       
@@ -84,15 +57,6 @@
     </item>
     
     <item>
-      <title>Mingw</title>
-      <link>https://ckolumbus.github.io/tags/mingw/</link>
-      <pubDate>Thu, 22 Feb 2018 10:20:03 +0100</pubDate>
-      
-      <guid>https://ckolumbus.github.io/tags/mingw/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Nikola</title>
       <link>https://ckolumbus.github.io/tags/nikola/</link>
       <pubDate>Fri, 16 Feb 2018 17:33:01 +0100</pubDate>
@@ -102,7 +66,43 @@
     </item>
     
     <item>
-      <title>Pyqt4</title>
+      <title>aspnetcore</title>
+      <link>https://ckolumbus.github.io/tags/aspnetcore/</link>
+      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/tags/aspnetcore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>https://ckolumbus.github.io/tags/configuration/</link>
+      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dotnetcore</title>
+      <link>https://ckolumbus.github.io/tags/dotnetcore/</link>
+      <pubDate>Sun, 11 Feb 2018 17:07:28 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/tags/dotnetcore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>https://ckolumbus.github.io/tags/api/</link>
+      <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
+      
+      <guid>https://ckolumbus.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyQt4</title>
       <link>https://ckolumbus.github.io/tags/pyqt4/</link>
       <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
       
@@ -129,11 +129,11 @@
     </item>
     
     <item>
-      <title>Tools</title>
-      <link>https://ckolumbus.github.io/tags/tools/</link>
-      <pubDate>Thu, 22 Feb 2018 10:20:03 +0100</pubDate>
+      <title>backporting</title>
+      <link>https://ckolumbus.github.io/tags/backporting/</link>
+      <pubDate>Wed, 23 Apr 2014 19:21:19 +0100</pubDate>
       
-      <guid>https://ckolumbus.github.io/tags/tools/</guid>
+      <guid>https://ckolumbus.github.io/tags/backporting/</guid>
       <description></description>
     </item>
     

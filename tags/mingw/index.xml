@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mingw on CKolumbus&#39; Blog</title>
+    <title>mingw on CKolumbus&#39; Blog</title>
     <link>https://ckolumbus.github.io/tags/mingw/</link>
-    <description>Recent content in Mingw on CKolumbus&#39; Blog</description>
+    <description>Recent content in mingw on CKolumbus&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Feb 2018 10:20:03 +0100</lastBuildDate>
@@ -23,9 +23,7 @@ sources on a Windows system using msys &amp;amp; mingw.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;2018-02-28 Update&lt;/strong&gt;:  clarified the use of &lt;code&gt;msys2&lt;/code&gt; shell&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;2018-02-26 Update&lt;/strong&gt;:  added information about run-time dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

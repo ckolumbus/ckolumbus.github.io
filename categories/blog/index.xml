@@ -23,9 +23,7 @@ sources on a Windows system using msys &amp;amp; mingw.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;2018-02-28 Update&lt;/strong&gt;:  clarified the use of &lt;code&gt;msys2&lt;/code&gt; shell&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;2018-02-26 Update&lt;/strong&gt;:  added information about run-time dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -46,9 +44,7 @@ in &lt;a href=&#34;http://golang.com&#34;&gt;go&lt;/a&gt; I looked at several Io
 &lt;p&gt;I was astonished by &lt;a href=&#34;https://github.com/karlkfi/inject&#34;&gt;karlkfi/inject&lt;/a&gt; how I was
 able to switch to an IoC with &lt;strong&gt;NO CHANGES WHATSOVER&lt;/strong&gt; on my ctor DI based classes.&lt;/p&gt;
 
-&lt;p&gt;Check out the small changes yourself below or on &lt;a href=&#34;https://github.com/ckolumbus/golangRestApiExampleWithDependencyInjection/commit/0c43952092e1f313e1a73a0c3cb938fed595e386#diff-77339446d6d7a72280ed646533aa22ae&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Check out the small changes yourself below or on &lt;a href=&#34;https://github.com/ckolumbus/golangRestApiExampleWithDependencyInjection/commit/0c43952092e1f313e1a73a0c3cb938fed595e386#diff-77339446d6d7a72280ed646533aa22ae&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
